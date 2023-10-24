@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dl84c5wblb0vr"]
+
+[ext_resource type="Script" path="res://Scripts/cell_scene.gd" id="1_oetxj"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dw8sn"]
+load_path = "res://.godot/imported/Tiles.png-1724ca9071b36ee0fbf5d5c2eb04d9f4.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g1nik"]
+size = Vector2(16, 16)
+
+[node name="Cells" type="Node2D"]
+script = ExtResource("1_oetxj")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = SubResource("CompressedTexture2D_dw8sn")
+hframes = 13
+
+[node name="Area" type="Area2D" parent="."]
+
+[node name="MouseArea" type="CollisionShape2D" parent="Area"]
+shape = SubResource("RectangleShape2D_g1nik")
+
+[connection signal="input_event" from="Area" to="." method="_on_area_input_event"]
+[connection signal="mouse_entered" from="Area" to="." method="_on_area_mouse_entered"]
+[connection signal="mouse_exited" from="Area" to="." method="_on_area_mouse_exited"]
