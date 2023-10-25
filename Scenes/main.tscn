@@ -1,8 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1tk40qdm20id"]
+[gd_scene load_steps=4 format=3 uid="uid://b1tk40qdm20id"]
 
 [ext_resource type="Script" path="res://Scripts/Main.gd" id="1_34v6u"]
+[ext_resource type="Script" path="res://Scripts/ServerConnection.gd" id="2_2ugee"]
+[ext_resource type="Script" path="res://Scripts/Demo.gd" id="3_enbs5"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_34v6u")
+
+[node name="ServerConnection" type="Node" parent="."]
+script = ExtResource("2_2ugee")
+
+[node name="Demo" type="Node" parent="."]
+script = ExtResource("3_enbs5")
 
 [node name="Camera2D" type="Camera2D" parent="."]
