@@ -18,7 +18,6 @@ config/features=PackedStringArray("4.1", "Mobile")
 
 Cell="*res://Scripts/cell.gd"
 Board="*res://Scripts/board.gd"
-Nakama="*res://addons/com.heroiclabs.nakama/Nakama.gd"
 
 [rendering]
 
